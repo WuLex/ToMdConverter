@@ -15,6 +15,15 @@ namespace SqlTableToMarkdown
             InitializeComponent();
         }
 
+        private void btnSelectFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                txtSelectedFile.Text = openFileDialog.FileName;
+            }
+        }
         private void btnConvert_Click(object sender, EventArgs e)
         {
             var markdown = GetMarkdownTable();
