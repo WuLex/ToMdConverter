@@ -27,8 +27,8 @@ namespace test
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
-
-                // Load Excel file into a DataTable
+                txtFilePath.Text = filePath;
+                // 将 Excel 文件加载到数据表中
                 DataTable dt = new DataTable();
                 using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
                 {
@@ -45,32 +45,38 @@ namespace test
                     }
                 }
 
-                // Convert DataTable to Markdown
-                string markdown = "|";
+                // 将 DataTable 转换为 Markdown
+                StringBuilder markdownSb = new StringBuilder();
+
+                markdownSb.Append("|");
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
-                    markdown += dt.Columns[i].ColumnName + "|";
+                    markdownSb.Append(dt.Columns[i].ColumnName + "|");
                 }
-                markdown += "\n|";
+                markdownSb.AppendLine(""); //换行
+
+                markdownSb.Append("|");
                 for (int i = 0; i < dt.Columns.Count; i++)
                 {
-                    markdown += "---|";
+                    markdownSb.Append("---|");
                 }
-                markdown += "\n";
+                markdownSb.AppendLine("");//换行
+
+
                 foreach (DataRow row in dt.Rows)
                 {
-                    markdown += "|";
+                    markdownSb.Append("|");
                     for (int i = 0; i < dt.Columns.Count; i++)
                     {
-                        markdown += row[i].ToString() + "|";
+                        markdownSb.Append(row[i].ToString() + "|");
                     }
-                    markdown += "\n";
+                    markdownSb.AppendLine("");//换行
                 }
-                markdown = Markdown.ToPlainText(markdown);
 
-                // Display Markdown content in SunnyUI control
+                //Markdown.ToHtml(markdownSb.ToString());
+                // 在 SunnyUI 控件中显示 Markdown 内容
                 //txtMarkdown.HtmlRender = true;
-                txtMarkdown.Text = markdown;
+                txtMarkdown.Text = markdownSb.ToString();
             }
         }
     }

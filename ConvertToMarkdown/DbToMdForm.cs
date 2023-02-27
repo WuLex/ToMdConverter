@@ -87,15 +87,7 @@ namespace test
             MessageBox.Show("转换完成");
         }
 
-     
-        private void Form1_Load(object sender, EventArgs e)
-        {
-        }
-
-        private void txtConnectionString_TextChanged(object sender, EventArgs e)
-        {
-        }
-
+  
         private async void btnConvertTbSchema_ClickAsync(object sender, EventArgs e)
         {
             // 获取所选表名
@@ -151,6 +143,14 @@ namespace test
         }
 
 
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void txtConnectionString_TextChanged(object sender, EventArgs e)
+        {
+        }
 
 
     }
