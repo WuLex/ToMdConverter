@@ -1,8 +1,8 @@
 # ToMdConverter
 MSSQL表结构生成Markdown文档/快速将Excel表格转换为MarkDown表格
 
-- MSSQL table structure generates Markdown documents
-- quickly converts Excel tables into MarkDown tables
+- Generating Markdown documents from MSSQL table structure
+- Quickly converting Excel tables to Markdown tables
 
 ------------------------
 ## 如图：
