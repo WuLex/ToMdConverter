@@ -2,7 +2,7 @@
 
 namespace SqlTableToMarkdown
 {
-    partial class Form2
+    partial class ExcelToMdFm
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -47,7 +47,7 @@ namespace SqlTableToMarkdown
             // 
             // btnSelectFile
             // 
-            this.btnSelectFile.Location = new System.Drawing.Point(12, 12);
+            this.btnSelectFile.Location = new System.Drawing.Point(12, 15);
             this.btnSelectFile.Name = "btnSelectFile";
             this.btnSelectFile.Size = new System.Drawing.Size(104, 33);
             this.btnSelectFile.TabIndex = 0;

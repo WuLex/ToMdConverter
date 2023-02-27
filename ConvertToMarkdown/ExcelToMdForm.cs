@@ -66,7 +66,7 @@ namespace test
                     }
                     markdown += "\n";
                 }
-                markdown = Markdown.ToHtml(markdown);
+                markdown = Markdown.ToPlainText(markdown);
 
                 // Display Markdown content in SunnyUI control
                 //txtMarkdown.HtmlRender = true;

@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 namespace SqlTableToMarkdown
 {
-    public partial class Form2 : Form
+    public partial class ExcelToMdFm : Form
     {
         private readonly string _filePath = "C:\\myExcelFile.xlsx";
 
-        public Form2()
+        public ExcelToMdFm()
         {
             InitializeComponent();
         }

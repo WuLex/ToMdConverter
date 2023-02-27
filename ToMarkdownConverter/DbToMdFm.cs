@@ -3,12 +3,12 @@ using System.Data.SqlClient;
 
 namespace SqlTableToMarkdown
 {
-    public partial class Form1 : Form
+    public partial class DbToMdFm : Form
     {
         private const string connectionString = "Data Source=myServerAddress;Initial Catalog=myDataBase;User ID=myUsername;Password=myPassword;";
         private const string tableName = "myTableName";
-      
-        public Form1()
+
+        public DbToMdFm()
         {
             InitializeComponent();
         }
